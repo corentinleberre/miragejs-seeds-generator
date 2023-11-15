@@ -11,18 +11,18 @@ npm install
 ## Usage
 
 ```javascript
-import generate from 'mirajejs-seeds-generator';
+import generate from "mirajejs-seeds-generator";
 
 const modelsData = {
   // Your models data here
 };
 
 const options = {
-  prefix: '...', // Optional
-  suffix: '...', // Optional
-  namespace: '...', // Optional
-  timing: '...', // Optional
-  outPath: '...', // Required
+  prefix: "...", // Optional
+  suffix: "...", // Optional
+  namespace: "...", // Optional
+  timing: "...", // Optional
+  outPath: "...", // Required
 };
 
 generate(modelsData, options);

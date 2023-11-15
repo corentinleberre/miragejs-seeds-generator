@@ -1,11 +1,17 @@
 {
   "name": "mirajejs-seeds-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Seeds generator for Mirajejs",
-  "main": "index.js",
+  "main": "src/generate.js",
   "type": "module",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/generate.js",
+    "build": "rollup -c",
+    "prettify": "prettier --write \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +24,8 @@
   "license": "MIT",
   "dependencies": {
     "prettier": "^3.1.0"
+  },
+  "devDependencies": {
+    "rollup": "^4.4.1"
   }
 }
