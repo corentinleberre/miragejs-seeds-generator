@@ -1,11 +1,8 @@
-import fs from "fs";
-import * as prettier from "prettier";
-
 const generateCodeFromTemplate = (modelsData, options) => {
   const { prefix, suffix, namespace, timing } = options;
 
   const modelsCode = Object.keys(modelsData)
-    .map((modelName) => `${modelName}: Model`)
+    .map((modelName) => `${modelName.slice(0, -1)}: Model`)
     .join(",");
 
   const seedsCode = Object.keys(modelsData)
@@ -52,18 +49,4 @@ const generateCodeFromTemplate = (modelsData, options) => {
   return template;
 };
 
-const generate = async (modelsData, options) => {
-  const { outPath } = options;
-
-  const generatedCode = generateCodeFromTemplate(modelsData, options);
-
-  const prettierCode = await prettier.format(generatedCode, {
-    semi: true,
-    parser: "babel",
-  });
-
-  fs.writeFileSync(outPath, prettierCode);
-  console.log("✅ MirajeJs models generated successfully!");
-};
-
-export default generate;
+export default generateCodeFromTemplate;
