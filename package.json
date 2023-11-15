@@ -1,0 +1,22 @@
+{
+  "name": "mirajejs-seeds-generator",
+  "version": "0.0.1",
+  "description": "Seeds generator for Mirajejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corentinleberre/mirajejs-seeds-generator.git"
+  },
+  "keywords": [
+    "Mirajejs"
+  ],
+  "author": "Corentin Le Berre",
+  "license": "MIT",
+  "dependencies": {
+    "prettier": "^3.1.0"
+  }
+}
